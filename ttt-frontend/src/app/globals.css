@@ -35,6 +35,15 @@ a {
   text-decoration: none;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.activity-section {
+  background-color: aqua;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
