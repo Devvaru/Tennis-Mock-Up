@@ -2,23 +2,18 @@
 
 import React, { useEffect, useState } from "react";
 // import Image from "next/image";
+import type { DropdownOption } from "../_types/types.ts";
 import styles from "../page.module.css";
-
-type Option = {
-    value: string;
-    label: string;
-    description: string;
-};
 
 export default function Home() {
 
-    const feedingOptions: Option[] = [
+    const feedingOptions: DropdownOption[] = [
         { value: "Floor Feed", label: "Floor Feed", description: "Roll the ball along the ground." },
         { value: "NDH Feed", label: "NDH Feed", description: "Loft the ball up with your non-dominant hand." },
         { value: "NDH Wall Feed", label: "NDH Wall Feed", description: "Loft the ball up and at the wall with your non-dominant hand." },
     ]
 
-    const [selectedFeed, setSelectedFeed] = useState<Option>(feedingOptions[0]);
+    const [selectedFeed, setSelectedFeed] = useState<DropdownOption>(feedingOptions[0]);
 
     const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
         const selected = feedingOptions.find(option => option.value === event.target.value);
