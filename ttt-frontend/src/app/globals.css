@@ -1,5 +1,5 @@
 :root {
-  --background: #ffffff;
+  --background: #82a082;
   --foreground: #171717;
 }
 
@@ -33,6 +33,90 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+main {
+  gap: 1rem;
+  min-width: 60%;
+  display: flex;
+  align-items: center;
+}
+
+.header {
+  align-self: center;
+  margin: 0;
+  width: 75%;
+}
+
+.activity-title {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.sections-container {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.activity-section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: white;
+  padding: 2rem;
+  width: 100%;
+}
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  width: 10rem;
+  gap: 5px;
+}
+
+.info-dropdown {
+  width: 100%;
+  margin: 1em auto;
+}
+
+.info-dropdown-button {
+  width: 100%;
+  background-color: #eee;
+  border: none;
+  padding: 0.75em 1em;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dropdown-symbol {
+  transform: rotate(180deg);
+  display: inline-block;
+  transition: transform 0.3s;
+}
+
+.dropdown-symbol.open {
+  transform: rotate(0deg);
+}
+
+.info-dropdown-content {
+  background: white;
+  padding: 0 1em;
+}
+
+.info-dropdown-content p {
+  margin: 1em 0;
 }
 
 @media (prefers-color-scheme: dark) {
