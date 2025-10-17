@@ -5,8 +5,16 @@ import React, { useEffect, useState } from "react";
 import type { DropdownOption } from "../_types/types.ts";
 import styles from "../page.module.css";
 
-export default function Home() {
+export default function FeedAtTarget() {
 
+    // Info dropdown
+    const [isOpen, setIsOpen] = useState(true);
+
+    // const toggleInfoDropdown = () => {
+    //     setIsOpen(!isOpen);
+    // }
+
+    // Selection dropdown
     const feedingOptions: DropdownOption[] = [
         { value: "Floor Feed", label: "Floor Feed", description: "Roll the ball along the ground." },
         { value: "NDH Feed", label: "NDH Feed", description: "Loft the ball up with your non-dominant hand." },
@@ -30,19 +38,27 @@ export default function Home() {
         <div className={styles.page}>
             <main className={styles.main}>
                 <header className="header">
-                    <h1>
+                    <h1 className="activity-title">
                         Feed At Target
                     </h1>
 
-                    <h3>
-                        What is Feeding?
-                    </h3>
-
                     {/* accordion */}
 
-                </header>
-                <div className="sections-container">
+                    <div className={`info-dropdown ${isOpen ? "active" : ""}`}>
+                        <button
+                            onClick={() => setIsOpen(!isOpen)} className="info-dropdown-button"
+                            aria-expanded={isOpen}>
+                            {<h3>What is Feeding?</h3> }
+                        </button>
 
+                        <div className="info-dropdown-content">
+                            <p>The idea of tennis feeding ... Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                        </div>
+
+                    </div>
+                </header>
+
+                <div className="sections-container">
                     <section className="activity-section">
                         <h2>
                             Tweak the Feed

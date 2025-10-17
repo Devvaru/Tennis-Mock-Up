@@ -53,6 +53,11 @@ main {
 .header {
   align-self: center;
   margin: 0 0 2rem 0;
+  width: 75%;
+}
+
+.activity-title {
+  text-align: center;
 }
 
 .sections-container {
@@ -78,6 +83,42 @@ main {
   flex-direction: column;
   width: 10rem;
   gap: 5px;
+}
+
+.info-dropdown {
+  width: 100%;
+  margin: 1em auto;
+}
+
+.info-dropdown-button {
+  width: 100%;
+  background-color: #eee;
+  border: none;
+  padding: 0.75em 1em;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.info-dropdown-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  background: white;
+  padding: 0 1em;
+}
+
+.info-dropdown-content p {
+  margin: 1em 0;
+}
+
+.info-dropdown.active .info-dropdown-content {
+  max-height: 500px;
+}
+
+.info-dropdown.active .info-dropdown-content {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
 }
 
 @media (prefers-color-scheme: dark) {
