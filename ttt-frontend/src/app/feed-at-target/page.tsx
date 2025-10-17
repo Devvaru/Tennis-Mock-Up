@@ -56,6 +56,7 @@ export default function FeedAtTarget() {
                             onClick={() => setIsOpen(!isOpen)} className="info-dropdown-button"
                             aria-expanded={isOpen}>
                             {<h3>What is Feeding?</h3>}
+                            {<p className={`dropdown-symbol ${isOpen ? "open" : ""}`}>^</p>}
                         </button>
 
                         <div className="info-dropdown-content" ref={contentRef} style={{ transition: "max-height 0.4s ease", overflow: "hidden" }}>
