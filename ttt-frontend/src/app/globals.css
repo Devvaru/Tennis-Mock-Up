@@ -1,5 +1,5 @@
 :root {
-  --background: #ffffff;
+  --background: #82a082;
   --foreground: #171717;
 }
 
@@ -35,13 +35,49 @@ a {
   text-decoration: none;
 }
 
-main {
+page {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+main {
+  gap: 1rem;
+  min-width: 60%;
+  display: flex;
+  align-items: center;
+}
+
+.header {
+  align-self: center;
+  margin: 0 0 2rem 0;
+}
+
+.sections-container {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .activity-section {
-  background-color: aqua;
+  align-self: flex-start;
+  justify-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: white;
+  padding: 2rem;
+  width: 100%;
+}
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  width: 10rem;
+  gap: 5px;
 }
 
 @media (prefers-color-scheme: dark) {

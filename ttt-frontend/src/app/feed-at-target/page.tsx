@@ -34,7 +34,7 @@ export default function Home() {
     return (
         <div className={styles.page}>
             <main className={styles.main}>
-                <header className="">
+                <header className="header">
                     <h1>
                         Feed At Target
                     </h1>
@@ -46,41 +46,45 @@ export default function Home() {
                     {/* accordion */}
 
                 </header>
+                <div className="sections-container">
 
-                <section className="activity-section">
-                    <h2>
-                        Tweak the Feed
-                    </h2>
-                    <label htmlFor="feed-select"></label>
-                    <select id="feed-select" value={selectedFeed.value} onChange={handleChange}>
-                        {feedingOptions.map((option) => (
-                            <option key={option.value} value={option.value}>
-                                {option.label}
-                            </option>
-                        ))}
-                    </select>
-                    <div className="description">
-                        <p>{selectedFeed.description}</p>
-                    </div>
-                </section>
+                    <section className="activity-section">
+                        <h2>
+                            Tweak the Feed
+                        </h2>
+                        <div className="dropdown">
+                            <label htmlFor="feed-select">Select Feed</label>
+                            <select id="feed-select" value={selectedFeed.value} onChange={handleChange}>
+                                {feedingOptions.map((option) => (
+                                    <option key={option.value} value={option.value}>
+                                        {option.label}
+                                    </option>
+                                ))}
+                            </select>
+                        </div>
+                        <div className="activity-description">
+                            <p>{selectedFeed.description}</p>
+                        </div>
+                    </section>
 
-                <section className="activity-section">
-                    <h2>
-                        Tweak the Technique
-                    </h2>
-                </section>
+                    <section className="activity-section">
+                        <h2>
+                            Tweak the Technique
+                        </h2>
+                    </section>
 
-                <section className="activity-section">
-                    <h2>
-                        Tweak the Target
-                    </h2>
-                </section>
+                    <section className="activity-section">
+                        <h2>
+                            Tweak the Target
+                        </h2>
+                    </section>
 
-                <section className="activity-section">
-                    <h2>
-                        Tweak the Game
-                    </h2>
-                </section>
+                    <section className="activity-section">
+                        <h2>
+                            Tweak the Game
+                        </h2>
+                    </section>
+                </div>
             </main>
             <footer className={styles.footer}>
             </footer>
