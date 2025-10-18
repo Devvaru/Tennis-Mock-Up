@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-import { SectionProps } from "../_types/types";
+import { ElementSectionProps } from "../_types/types";
 
-export default function Section({ title, options }: SectionProps) {
-    console.log(title, options)
-
+export default function ElementSection({ title, options }: ElementSectionProps) {
     const [selectedOption, setSelectedOption] = useState(options[0]);
 
     const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
