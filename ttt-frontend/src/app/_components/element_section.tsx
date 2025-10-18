@@ -16,10 +16,8 @@ export default function ElementSection({ title, options }: ElementSectionProps) 
             </h2>
 
             <div className="dropdown">
-                <label htmlFor="option-select">Select {title}</label>
-
-                <select id="option-select" value={selectedOption.value} onChange={handleChange}>
-
+                <label>Select {title}</label>
+                <select value={selectedOption.value} onChange={handleChange}>
                     {options.map((option) => (
                         <option key={option.value} value={option.value}>
                             {option.title}
