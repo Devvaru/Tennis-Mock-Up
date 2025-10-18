@@ -1,11 +1,28 @@
 "use client"
 
 import React, { useEffect, useState, useRef } from "react";
-// import Image from "next/image";
-import type { DropdownOption } from "../_types/types.ts";
+import type { ActivityElement, DropdownOption } from "../_types/types.ts";
+import { activityElements } from "../_data/activity-elements-data";
+import { activityPatterns } from "../_data/activity-patterns-data";
 import styles from "../page.module.css";
 
 export default function FeedAtTarget() {
+
+    // Set the Title and ID number for each activity pattern page
+    const pageTitle = activityPatterns[0].title;
+    const pageId = activityPatterns[0].id;
+
+    // Pulls in all data that can be associated with the page
+    const findActivityElements = (associatedId: number): ActivityElement[] => {
+        return activityElements.filter(element =>
+            element.pages?.some(page => page.associated_id === associatedId)
+        );
+    };
+
+    const pageElements: ActivityElement[] = findActivityElements(pageId);
+    console.log(pageElements);
+
+    ///////////////////////////////////
 
     // Info dropdown
     const [isOpen, setIsOpen] = useState(true);
@@ -21,10 +38,6 @@ export default function FeedAtTarget() {
             }
         }
     }, [isOpen]);
-
-    // const toggleInfoDropdown = () => {
-    //     setIsOpen(!isOpen);
-    // }
 
     // Selection dropdown
     const feedingOptions: DropdownOption[] = [
@@ -46,7 +59,7 @@ export default function FeedAtTarget() {
             <main className={styles.main}>
                 <header className="header">
                     <h1 className="activity-title">
-                        Feed At Target
+                        {pageTitle}
                     </h1>
 
                     {/* accordion */}
