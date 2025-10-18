@@ -2,10 +2,10 @@
 
 import React from "react";
 import type { ActivityElement } from "../_types/types.ts";
-import { activityElements } from "../_data/activity-elements-data";
 import { activityPatterns } from "../_data/activity-patterns-data";
 import styles from "../page.module.css";
 
+import { findActivityElements } from "../_utils/findActivityElements";
 import ElementSection from "../_components/element_section";
 import InfoSection from "../_components/info_section";
 
@@ -16,12 +16,6 @@ export default function FeedAtTarget() {
     const pageId = activityPatterns[0].id;
 
     // Pulls in all data that can be associated with the page
-    const findActivityElements = (associatedId: number): ActivityElement[] => {
-        return activityElements.filter(element =>
-            element.pages?.some(page => page.associated_id === associatedId)
-        );
-    };
-
     const pageElements: ActivityElement[] = findActivityElements(pageId);
 
     return (
