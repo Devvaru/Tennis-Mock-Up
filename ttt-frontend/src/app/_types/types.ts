@@ -1,9 +1,3 @@
-export type DropdownOption = {
-    value: string;
-    label: string;
-    description: string;
-};
-
 export interface ActivityPattern {
     id: number;
     title: string;
@@ -28,8 +22,14 @@ export interface ActivityPatternList {
 
 export interface ActivityElement {
     id: number;
+    label: string;
     title: string;
     options: ActivityOption[];
     info?: ActivityInfo[];
     pages?: ActivityPatternList[];
 };
+
+export interface SectionProps {
+    title: string;
+    options: ActivityOption[];
+}
