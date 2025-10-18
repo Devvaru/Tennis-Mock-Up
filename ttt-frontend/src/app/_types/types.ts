@@ -31,5 +31,5 @@ export interface ActivityElement {
     title: string;
     options: ActivityOption[];
     info?: ActivityInfo[];
-    activity_patterns?: ActivityPatternList[];
+    pages?: ActivityPatternList[];
 };

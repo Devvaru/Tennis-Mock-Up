@@ -12,7 +12,7 @@ export const activityElements: ActivityElement[] = [
         info: [
             { id: 0, title: "What is Feeding?", description: "The idea of tennis feeding ... Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. " }
         ],
-        activity_patterns: [
+        pages: [
             { associated_id: 0 }
         ]
     },
@@ -24,7 +24,7 @@ export const activityElements: ActivityElement[] = [
             { id: 1, value: "Tossing Path", title: "Tossing Path", description: "Toss the ball upward." },
             { id: 2, value: "Tossing Quality", title: "Tossing Quality", description: "Smooth." }
         ],
-        activity_patterns: [
+        pages: [
             { associated_id: 0 }
         ]
     },
@@ -36,7 +36,7 @@ export const activityElements: ActivityElement[] = [
             { id: 1, value: "Container", title: "Container", description: "Toss the ball into a Container. A basket is wondefull. Put something in the container to prevent the ball from bouncing out, like a towel, for example." },
             { id: 2, value: "Ball On Cone", title: "Ball On Cone", description: "Balance a ball on a cone. Very difficult target." }
         ],
-        activity_patterns: [
+        pages: [
             { associated_id: 0 }
         ]
     },
@@ -48,7 +48,7 @@ export const activityElements: ActivityElement[] = [
             { id: 1, value: "k-Times", title: "k-Times", description: "Pick a value for k and try to catch the ball k times. k=5 is often a good 1st choice." },
             { id: 2, value: "k-Out-Of-n", title: "k-Out-Of-n", description: "Pick a value k and a bigger value n, and of n attempts, make k catches. k=3 and n=5 can be a nice place to start." }
         ],
-        activity_patterns: [
+        pages: [
             { associated_id: 0 }
         ]
     }
