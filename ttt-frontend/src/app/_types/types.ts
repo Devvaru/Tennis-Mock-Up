@@ -22,9 +22,14 @@ export interface ActivityInfo {
     description: string;
 }
 
+export interface ActivityPatternList {
+    associated_id: number;
+}
+
 export interface ActivityElement {
     id: number;
     title: string;
     options: ActivityOption[];
     info?: ActivityInfo[];
+    activity_patterns?: ActivityPatternList[];
 };
